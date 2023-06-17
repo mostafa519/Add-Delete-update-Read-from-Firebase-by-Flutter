@@ -115,7 +115,7 @@ class _MyWidgetState extends State<logIn> {
                       try {
                         await FirebaseAuth.instance.signInWithEmailAndPassword(
                             email: email.text, password: _password.text);
-                        Get.to(chat());
+                        Get.to(MainLayot());
                       } on FirebaseAuthException catch (e) {
                         if (e.code == 'user-not-found') {
                           print('No user found for that email.');
@@ -140,14 +140,14 @@ class _MyWidgetState extends State<logIn> {
                 SizedBox(
                   height: 20,
                 ),
-                TextButton(
-                    onPressed: () {
-                      Get.to(MainLayot());
-                    },
-                    child: Text("Home")),
-                SizedBox(
-                  height: 20,
-                ),
+                // TextButton(
+                //     onPressed: () {
+                //       Get.to(MainLayot());
+                //     },
+                //     child: Text("Home")),
+                // SizedBox(
+                //   height: 20,
+                // ),
               ],
             ),
           ),
